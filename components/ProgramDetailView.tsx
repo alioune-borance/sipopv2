@@ -29,7 +29,6 @@ interface ProgramDetailViewProps {
   onBack: () => void;
 }
 
-// Mock projects specifically for MPEM programs based on DPPD 2026
 const programProjects: Record<string, any[]> = {
   'P1': [
     { id: 'PRJ-P1-01', name: 'Géolocalisation des embarcations', source: 'État (BCI)', budget: '31.4 Mds', physical: 40, financial: 45, result: '20 000 pirogues équipées', indicator: 'Taux de couverture de la flotte' },
@@ -154,7 +153,6 @@ const ProgramDetailView: React.FC<ProgramDetailViewProps> = ({ program, onBack }
               </div>
             </div>
 
-            {/* SCORE SANTÉ CORRIGÉ - DESIGN PREMIUM */}
             <div className="state-gradient text-white p-10 rounded-[2.5rem] shadow-2xl flex flex-col justify-between relative overflow-hidden border border-white/5">
                <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -mr-16 -mt-16 blur-2xl"></div>
                <div className="relative z-10">
@@ -162,7 +160,7 @@ const ProgramDetailView: React.FC<ProgramDetailViewProps> = ({ program, onBack }
                     <ShieldAlert size={18} className="mr-3" /> Score Santé
                   </h4>
                   <div className="text-7xl font-serif font-bold text-center mb-6 drop-shadow-2xl">
-                    82<span className="text-2xl opacity-40">/100</span>
+                    82%
                   </div>
                   <p className="text-xs text-center text-emerald-100 font-medium leading-relaxed px-2">
                     Le programme affiche une performance robuste malgré des risques modérés identifiés sur le P2.

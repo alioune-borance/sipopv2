@@ -5,9 +5,9 @@ import TopBar from './components/TopBar';
 import DashboardView from './components/DashboardView';
 import MinistriesView from './components/MinistriesView';
 import ProjectsView from './components/ProjectsView';
-import AIView from './components/AIView';
 import DataIngestionView from './components/DataIngestionView';
 import ProjectDashboardView from './components/ProjectDashboardView';
+import FieldMonitoringView from './components/FieldMonitoringView';
 import { ViewState, Project } from './types';
 
 const App: React.FC = () => {
@@ -27,10 +27,10 @@ const App: React.FC = () => {
         return <MinistriesView />;
       case 'projects':
         return <ProjectsView onSelectProject={navigateToProject} />;
-      case 'ai-analysis':
-        return <AIView />;
       case 'ingestion':
         return <DataIngestionView />;
+      case 'field-monitoring':
+        return <FieldMonitoringView />;
       case 'project-dashboard':
         return selectedProject ? (
           <ProjectDashboardView 

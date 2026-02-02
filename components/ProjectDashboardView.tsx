@@ -130,8 +130,8 @@ const ProjectDashboardView: React.FC<ProjectDashboardViewProps> = ({ project, on
              <div className="flex flex-col gap-4 min-w-[280px]">
                 <div className="p-8 bg-white border border-slate-100 rounded-[2.5rem] shadow-sm text-center">
                    <div className="text-[10px] font-black text-slate-400 uppercase tracking-[0.3em] mb-4">Score de Performance</div>
-                   <div className="text-7xl font-serif font-bold text-state-900">84<span className="text-2xl opacity-40">/100</span></div>
-                   <div className="mt-4 px-4 py-2 bg-emerald-50 text-emerald-700 text-[9px] font-black rounded-full border border-emerald-100 uppercase tracking-widest inline-block">Souveraineté : A-</div>
+                   <div className="text-7xl font-serif font-bold text-state-900">84%</div>
+                   <div className="mt-4 px-4 py-2 bg-emerald-50 text-emerald-700 text-[9px] font-black rounded-full border border-emerald-100 uppercase tracking-widest inline-block">Souveraineté : 90%</div>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                    <div className="p-6 bg-state-900 text-white rounded-[2rem] text-center">
@@ -182,7 +182,7 @@ const ProjectDashboardView: React.FC<ProjectDashboardViewProps> = ({ project, on
                <div className="space-y-6">
                   {[
                     { label: "Endogénéité (RI/RE)", val: "65%", p: 65, col: "emerald" },
-                    { label: "Équité Territoriale", val: "B+", p: 78, col: "blue" },
+                    { label: "Équité Territoriale", val: "78%", p: 78, col: "blue" },
                     { label: "Absorption BCI", val: "42%", p: 42, col: "amber" },
                   ].map((stat, i) => (
                     <div key={i}>

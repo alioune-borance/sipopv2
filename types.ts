@@ -1,10 +1,23 @@
 
-export type ViewState = 'dashboard' | 'ministries' | 'projects' | 'ai-analysis' | 'settings' | 'program-detail' | 'ingestion' | 'project-dashboard';
+export type ViewState = 'dashboard' | 'ministries' | 'projects' | 'settings' | 'program-detail' | 'ingestion' | 'project-dashboard' | 'field-monitoring';
 
 export interface BudgetDetail {
   ae: number; // Autorisations d'Engagement
   cp: number; // Crédits de Paiement
   year: number;
+}
+
+export interface MonitoringVisit {
+  id: string;
+  date: string;
+  author: string;
+  status: 'Conforme' | 'Alerte' | 'Critique';
+  observation: string;
+  analysis: string;
+  media: {
+    type: 'image' | 'video';
+    url: string;
+  }[];
 }
 
 export interface Program {
@@ -54,6 +67,7 @@ export interface Project {
   endDate?: string;
   location?: string;
   beneficiariesCount?: string;
+  monitoringVisits?: MonitoringVisit[];
 }
 
 export interface AIRisk {
